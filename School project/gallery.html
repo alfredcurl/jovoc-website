@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gallery</title>
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet' >
+    <link rel="stylesheet" href="/css/bootstrap.min.css"> 
+    <link rel="stylesheet" href="swiper.min.css">
+    <link rel="stylesheet" href="lightbox.css">
+    <style>
+            @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700&display=swap');
+      *{
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+}
+body{
+  background-color: #fff;
+  background-size: cover;
+  object-fit: cover;
+}
+.navbar-scrolled{
+  background-color: #16163F;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+}
+.bg-dark{
+background-color: #16163F !important;
+}
+      .navbar .navbar-nav .nav-link{
+        color: #fff;
+    text-decoration: none;
+    font-size: 13px;
+    flex: 1;
+    text-align: right;
+   
+      }
+      .navbar .navbar-expand-lg{
+        box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+      }
+      .navbar .navbar-nav .nav-link::after{
+        content: '';
+    width: 0%;
+    height: 2px;
+    background: #fff;
+    display: block;
+    margin: auto;
+    transition: 0.5s;
+      }
+   .navbar .navbar-nav .nav-link:hover::after{
+    width: 100%;
+   }
+   .olevel-info{
+    color: #fff;
+    margin-top: 50px;
+    margin-bottom: 100px;
+   }
+   .table{
+    color: #fff;
+   }
+   .contact-div{
+  margin-top: 100px;
+    width: 100%;
+    background-color: #f44336;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    color: #fff;
+   }
+.footer-end{
+    /* background-color: blue; */
+    height: 50px;
+    font-size: 13px;
+    padding-bottom: 80px;
+    color: #fff;
+    text-align: center;
+    padding-top: 50px;
+   }
+   .row {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 0 4px;
+}
+
+/* Create four equal columns that sits next to each other */
+.column {
+  flex: 20%;
+  max-width: 30.3%;
+  padding: 0 10px;
+}
+
+.column img {
+  margin-top: 8px;
+  vertical-align: middle;
+  width: 100%;
+  filter: grayscale(1) brightness(0.5);
+  border-radius: 5px;
+  cursor: pointer;
+  transition: 0.3s linear;
+}
+.column img:hover {
+  filter: grayscale(0);
+}
+@media screen and (max-width: 800px) {
+  .column {
+    flex: 50%;
+    max-width: 50%;
+  }
+}
+
+/* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 600px) {
+  .column {
+    flex: 100%;
+    max-width: 100%;
+  }
+  .column img {
+    filter: grayscale(0) brightness(1);
+  }
+}
+.album{
+  color: #fff;
+}
+    </style>
+</head>
+<body>
+        <!-- Nav Bar -->
+<nav class="navbar navbar-expand-lg sticky-top navbar-dark bg-dark">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="index.html"><img src="images/BUDGE-142a3934.webp" alt="budge" height="50px"/>&nbsp;&nbsp;&nbsp;&nbsp;Jovoc</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="index.html">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="About.html">About</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="academics.html">Academics</a>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link" href="admissions.html" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              Admissions&nbsp;<i class='bx bx-chevron-down' style="font-size: 12px;"></i></a>
+              <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                <li><a class="dropdown-item" href="ordinarylevel.html">Ordinary-level</a></li>
+                <li><a class="dropdown-item" href="advancedlevel.html">Advanced-level</a></li>
+                <li><a class="dropdown-item" href="admissions.html">Application</a></li>
+                <li><a class="dropdown-item" href="bursaries.html">Bursaries</a></li>
+              </ul>
+          </li>
+          <li class="nav-item gallery">
+            <a class="nav-link " href="gallery.html" tabindex="-1" aria ="true">Gallery</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link " href="contact.html" tabindex="-1" aria ="true">Contact Us</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+ <!-- Welcome to gallery -->
+ <div class="container-fluid">
+    <h4 style="color: #000; text-align: center; padding-top: 25px; padding-bottom: 25px;">Pictionary</h4>
+    <div class="col-md-4 album">
+      <label for="inputState" class="form-label">Albums</label>
+      <select id="inputState" class="form-select">
+        <option selected><a href="gallery.html">Album...</a></option>
+        <option><a href="infrustructure.html">Infrastructure</a></option>
+        <option>Students</option>
+        <option>Staff</option>
+      </select>
+    </div>
+    <div class="row">
+      <div class="column">
+        <a href="images/11-9cd4ad5b.webp" data-lightbox="infrastructure" data-title="Caption1">
+          <img src="images/11-9cd4ad5b.webp" />
+        </a>
+        <a href="images/2-5a421258.webp" data-lightbox="infrastructure" data-title="Caption2">
+          <img src="images/2-5a421258.webp"/>
+        </a>
+        <a href="images/20210319_083401-78f3b170.webp" data-lightbox="infrastructure" data-title="Caption3">
+          <img src="images/20210319_083401-78f3b170.webp" />
+        </a>
+        <a href="images/20210319_083445-d2b3e896.webp" data-lightbox="infrastructure" data-title="Caption4">
+          <img src="images/20210319_083445-d2b3e896.webp" />
+        </a>
+        <a href="images/20210319_083529-d280f5f4.webp" data-lightbox="infrastructure" data-title="Caption5">
+          <img src="images/20210319_083529-d280f5f4.webp" />
+        </a>
+      </div>
+      <div class="column">
+        <a href="images/3-ab9817f2.webp" data-lightbox="infrastructure" data-title="Caption6">
+          <img src="images/3-ab9817f2.webp">
+        </a>
+        <a href="images/4-130d0567.webp" data-lightbox="infrastructure" data-title="Caption7">
+          <img src="images/4-130d0567.webp">
+        </a>
+        <a href="images/5-e2d700cd.webp" data-lightbox="infrastructure" data-title="Caption8">
+          <img src="images/5-e2d700cd.webp">
+        </a>
+        <a href="images/8-81932b19.webp" data-lightbox="infrastructure" data-title="Caption9">
+          <img src="images/8-81932b19.webp">
+        </a>
+        <a href="images/9-70492eb3.webp" data-lightbox="infrastructure" data-title="Caption10">
+          <img src="images/9-70492eb3.webp" />
+        </a>
+      </div>
+      <div class="column">
+        <a href="images/A_SECTION_OF_SENIOR_SIX_SCIENCE_CLASS-3531d2f0.webp" data-lightbox="infrastructure" data-title="Caption11">
+          <img src="images/A_SECTION_OF_SENIOR_SIX_SCIENCE_CLASS-3531d2f0.webp" />
+        </a>
+        <a href="images/chapel-40426aae.webp" data-lightbox="infrastructure" data-title="Caption12">
+          <img src="images/chapel-40426aae.webp">
+        </a>
+        <a href="images/DSC_0692-ec8ddffa.webp" data-lightbox="infrastructure" data-title="Caption13">
+          <img src="images/DSC_0692-ec8ddffa.webp">
+        </a>
+        <a href="images/DSC_0751-20180704-ccf743e0.webp" data-lightbox="infrastructure" data-title="Caption14">
+          <img src="images/DSC_0751-20180704-ccf743e0.webp">
+        </a>
+        <a href="images/DSC_0758-20180704-09984f4d.webp" data-lightbox="infrastructure" data-title="Caption15">
+          <img src="images/DSC_0758-20180704-09984f4d.webp" />
+        </a> 
+      </div>
+      <div class="column">
+        <a href="images/DSC_4138-4149a2a4.webp" data-lightbox="infrastructure" data-title="Caption16">
+          <img src="images/DSC_4138-4149a2a4.webp" />
+        </a>
+        <a href="images/DSC_4181-392c7abd.webp" data-lightbox="infrastructure" data-title="Caption17">
+          <img src="images/DSC_4181-392c7abd.webp">
+        </a>
+        <a href="images/IMG_20190208_092117_6-fa93eca4.webp" data-lightbox="infrastructure" data-title="Caption18">
+          <img src="images/IMG_20190208_092117_6-fa93eca4.webp">
+        </a>
+        <a href="images/IMG_20190208_093115_7-c2bd5c7d.webp" data-lightbox="infrastructure" data-title="Caption19">
+          <img src="images/IMG_20190208_093115_7-c2bd5c7d.webp">
+        </a>
+        <a href="images/DSC_0758-20180704-09984f4d.webp" data-lightbox="infrastructure" data-title="Caption20">
+          <img src="images/DSC_0758-20180704-09984f4d.webp" />
+        </a> 
+      </div>
+    </div>
+  </div>
+
+
+  <!-- Location -->
+  <div class="container-md">
+    <div class="container contact-div">
+      <div class="row">
+        <div class="col">
+          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3989.579324858763!2d30.642581073763097!3d-0.6271307352584048!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x19d91a4738fd4dbb%3A0x9420c21b90456cdf!2sSt.%20Joseph&#39;s%20Vocational%20School%20Mbarara!5e0!3m2!1sen!2sug!4v1699793525654!5m2!1sen!2sug" width="400" height="250" style="border:0; display: flex; justify-content: flex-end; border-radius: 5px;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+        <div class="col">
+          <h3 style="text-align: left; padding-left: 50px;">Location</h3>
+          <p style="text-align: left; padding-left: 50px;">Nyamitanga Hill, <br>
+            4KM From Mbarara Town, <br>
+            Branching off Mbarara - Kabale,<br>
+            Along Isingiro Rd. <br><br>
+            
+            P.O.Box 120, Mbarara - Uganda</p>
+        </div>
+        <div class="col">
+          <h3>Contacts</h3>
+          <p><i class='bx bx-envelope' style="text-align: left;"></i>&nbsp;Info@jovoc.sc.ug</p>
+          <p><i class='bx bx-envelope' style="text-align: left;"></i>&nbsp;headmaster@jovoc.sc.ug</p>
+          <p><i class='bx bxs-phone' style="color: white; text-align: left;"></i>&nbsp;+256 750 404590</p>
+          <p><i class='bx bxs-phone' style="color: white; text-align: left;"></i>&nbsp;+256 754 613843</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="container-md footer-end"><p>Copyright © 2023 St. Joseph's Vocational School Mbarara <br>
+    Powered by Jovoc I.T Department</p>
+  </div>
+
+
+
+
+
+
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="lightbox-plus-jquery.js"></script>
+  
+
+  
+
+
+
+
+
+
+
+</body>
+</html>

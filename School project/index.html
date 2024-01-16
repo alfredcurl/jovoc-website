@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>St.Joseph's Vocational School Mbarara</title>
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet' >
+    <link rel="stylesheet" href="/css/bootstrap.min.css"> 
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700&display=swap');
+      *{
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+}
+body{
+  background-color: #fff;
+  background-size: cover;
+  object-fit: cover;
+}
+header{
+  background-image: linear-gradient(rgba(4,9,30,0.9),rgb(4,9,30,0.5)),url(images/A_SECTION_OF_SENIOR_SIX_SCIENCE_CLASS-3531d2f0.webp);
+  height: 100vh;
+  min-height: 400px;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.navbar-scrolled{
+  background-color: #16163F;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+}
+.bg-dark{
+background-color: #16163F !important;
+}
+      .navbar .navbar-nav .nav-link{
+        color: #fff;
+    text-decoration: none;
+    font-size: 13px;
+    flex: 1;
+    text-align: right;
+   
+      }
+      .navbar .navbar-expand-lg{
+        box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+      }
+      .navbar .navbar-nav .nav-link::after{
+        content: '';
+    width: 0%;
+    height: 2px;
+    background: #fff;
+    display: block;
+    margin: auto;
+    transition: 0.5s;
+      }
+   .navbar .navbar-nav .nav-link:hover::after{
+    width: 100%;
+   }
+.carousel-caption{
+  margin: 0 auto;
+  text-align: center;
+  padding-bottom: 80px;
+  background-image: linear-gradient(rgba(4,9,30,0.5),rgb(4,9,30,0.5)),url(images/DSC_0692-ec8ddffa.webp);
+  text-shadow: #000;
+  font-weight: 400;
+}
+#cusCarousel.carousel-inner .item .active > img{
+-webkit-animation: thing 20s;
+-o-animation: thing 20s;
+animation: thing 20s;
+}
+@keyframes thing{
+  from{
+    transform: scale(1,1);
+  }
+  to{
+    transform: scale(1.5,1.5);
+  }
+}
+   .container-md{
+    color: #000;
+    width: 100%;
+    padding-top: 100px;
+    text-align: center;
+   }
+   .container-md .opening-p{
+    color: #fff;
+   }
+   .container-md .opening-p span{
+    color: #f44336;
+    font-size: 50px;
+   }
+   .welcome-word >h1{
+    margin-top: 100px;
+    color: #fff;
+   }
+   .container-md .founder-bg{
+    background-color: blue;
+   }
+   #founder{
+    text-align: left;
+   }
+   .second-p{
+    text-align: left;
+   }
+   .second-p span{
+    color: #f44336;
+    font-weight: 600;
+    background-color: #fff;
+    border-radius: 2px;
+    padding: 5px, 5px, 5px, 5px;
+   }
+  
+   .founder-bg{
+    margin-top: 100px;
+    border-radius: 5px;
+    padding-bottom: 100px;
+   }
+   .head-teacher{
+    text-align: left;
+    padding-top: 100px;
+   }
+   .container .head-teacher .col{
+    padding-top: 100px;
+    color: blue;
+   }
+   .head-teacher img{
+    margin-left: 100px;
+   }
+  
+  
+   .contact-div{
+    color: #fff;
+    background-color: #f44336;
+    padding-top: 50px;
+    padding-bottom: 50px;
+   }
+   .footer-end{
+    /* background-color: blue; */
+    height: 50px;
+    font-size: 13px;
+    padding-bottom: 80px;
+   }
+    </style>  
+</head>
+<body>
+  <!-- <img src="images/DSC_4181-392c7abd.webp" alt="" width="100%" height="480px" style="object-fit: cover;"> -->
+  <header>
+    <div class="container-md welcome-word"> 
+      <h1>St.Joseph's Vocational School <br>
+      Mbarara</h1>
+      <p class="opening-p">
+       <span>s</span> aint. Joseph’s Vocational School, Mbarara is a Private Boarding "O" and "A" level <br>
+        Senior Secondary School with a remarkable reputation in Mbarara City. Located in Nyamitanga, <br>
+        4KM from Mbarara City off Isingiro RD, the school is a Catholic-founded boys-only senior secondary school <br>
+        that Proudly imparts vocational skills in Agriculture, Carpentry, Woodwork, and <br>
+        Building Construction in addition to Arts and Sciences. </p>
+        <button type="button" class="btn btn-danger"><a href="About.html" style="list-style: none; color: #fff; text-decoration: none;">Visit For More</a> </i> </button>
+    </div>
+  </header>
+<!-- Nav Bar -->
+<nav class="navbar navbar-expand-lg  navbar-dark bg-dark bg-transparent fixed-top">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="index.html"><img src="images/BUDGE-142a3934.webp" alt="budge" height="50px"/>&nbsp;&nbsp;&nbsp;&nbsp;Jovoc</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="index.html">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="About.html">About</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="academics.html">Academics</a>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link" href="admissions.html" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            Admissions&nbsp;<i class='bx bx-chevron-down' style="font-size: 12px;"></i></a>
+            <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+              <li><a class="dropdown-item" href="ordinarylevel.html">Ordinary-level</a></li>
+              <li><a class="dropdown-item" href="advancedlevel.html">Advanced-level</a></li>
+              <li><a class="dropdown-item" href="admissions.html">Application</a></li>
+              <li><a class="dropdown-item" href="bursaries.html">Bursaries</a></li>
+            </ul>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link " href="gallery.html" tabindex="-1" aria ="true">Gallery</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link " href="contact.html" tabindex="-1" aria ="true">Contact Us</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+<!-- Head-Teachers Remrks -->
+<div class="container-md head-teacher">
+  <div  class="container">
+    <div class="row">
+      <div class="col" style="padding-top: 100px; box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;">
+        <h1 style="color: #f44336;">Head Teacher's Remarks</h1>
+        <p style="padding-top: 20px;">
+          Thank you for taking the time to browse our website. <br>
+          I hope that you find it informative and that it answers any questions you may have. <br>
+           I feel truly privileged to lead such a wonderful school. We have an aspiration 
+           for all our students that through their school journey they will fulfill their academic 
+            potential and become successful lifelong learners and responsible leaders. 
+        </p>
+      </div>
+      <div class="col" style="box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;">
+        <img src="images/godwin- Headmaster Jovovoc.webp" alt="head teacher" width="400px" height="400px" style="border-radius: 50%; object-fit: cover; object-position: top; margin-top: 20px;">
+        <h6 style="position: relative; text-align: center; padding-top: 20px; margin-left: 50px; color: #f44336;">Rev. Fr. Dr.  Godwin Muhangi - Headmaster <br>
+         Jan 2017 till date</h6>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="container edu-tab" style="padding-top: 80px;">
+  <h4 style="text-align: center; color: #f44336;">Taking Your Education To The Next Level</h4>
+  <div class="row" style="padding-top: 100px;">
+    <div class="col">
+      <img src="images/Academic .png" alt="icon2" width="100px" height="100px" style="object-fit: cover;">
+      <h6 style="color: #f44336; text-align: left;">Academic Curriculum</h6>
+      <p>Our academic curriculum is designed to provide a well-rounded education 
+        that prepares students for the future.</p>
+    </div>
+    <div class="col">
+      <img src="images/Vocational skills.png" alt="icon" width="100px" height="100px" style="object-fit: cover;">
+      <h6 style="color: #f44336; text-align: left;">Vocational Skills</h6>
+      <p>We offer vocational courses in Agriculture, 
+        Carpentry, Woodwork, and Building Construction 
+        in addition to Arts and Sciences.</p>
+    </div>
+    <div class="col">
+      <img src="images/Extra Curricular.png" alt="icon3" width="100px" height="100px" style="object-fit: cover;">
+      <h6 style="color: #f44336; text-align: left;">Extracurricular Activities</h6>
+      <p>We offer a variety of extracurricular activities 
+        to help students develop their talents and interests.</p>
+    </div>
+  </div>
+</div>
+<div class="container-md">
+  <div class="container" style="background-color: #16163F; padding-bottom: 50px;">
+    <h4 style="text-align: center; color: #fff; padding-top: 50px;">Why Choose Jovoc</h4>
+    <div class="row" style="color: #fff; padding-top: 20px;">
+      <div class="col">
+        <i class='bx bxs-calendar-check' style="font-size: 30px;"></i><br><br>
+        <h1 style="text-align: center;">43</h1>
+        <p>Years Of Experience</p>
+      </div>
+      <div class="col">
+        <i class='bx bxs-graduation' style="font-size: 30px;"></i><br><br>
+        <h1>3</h1>
+        <p>Vocational Courses</p>
+      </div>
+      <div class="col">
+        <i class='bx bxs-user' style="font-size: 30px;"></i><br><br>
+       <h1 style="text-align: center;">956</h1>
+       <p>Total Students <br>Enrolled</p>
+      </div>
+      <div class="col">
+        <i class='bx bx-football' style="font-size: 30px;"></i><br><br>
+        <h1>10</h1>
+        <p>Extracurricular <br>Activities</p>
+       </div>
+    </div>
+  </div>
+</div>
+<div class="container-md">
+  <div class="container contact-div">
+    <div class="row">
+      <div class="col">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3989.579324858763!2d30.642581073763097!3d-0.6271307352584048!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x19d91a4738fd4dbb%3A0x9420c21b90456cdf!2sSt.%20Joseph&#39;s%20Vocational%20School%20Mbarara!5e0!3m2!1sen!2sug!4v1699793525654!5m2!1sen!2sug" width="400" height="250" style="border:0; display: flex; justify-content: flex-end; border-radius: 5px;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+      </div>
+      <div class="col">
+        <h3 style="text-align: left; padding-left: 50px;">Location</h3>
+        <p style="text-align: left; padding-left: 50px;">Nyamitanga Hill, <br>
+          4KM From Mbarara Town, <br>
+          Branching off Mbarara - Kabale,<br>
+          Along Isingiro Rd. <br><br>
+          
+          P.O.Box 120, Mbarara - Uganda</p>
+      </div>
+      <div class="col">
+        <h3>Contacts</h3>
+        <p><i class='bx bx-envelope' style="text-align: left;"></i>&nbsp;Info@jovoc.sc.ug</p>
+        <p><i class='bx bx-envelope' style="text-align: left;"></i>&nbsp;headmaster@jovoc.sc.ug</p>
+        <p><i class='bx bxs-phone' style="color: white; text-align: left;"></i>&nbsp;+256 750 404590</p>
+        <p><i class='bx bxs-phone' style="color: white; text-align: left;"></i>&nbsp;+256 754 613843</p>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="container-md footer-end"><p>Copyright © 2023 St. Joseph's Vocational School Mbarara <br>
+  Powered by Jovoc I.T Department</p>
+</div>
+
+
+
+
+
+
+
+    <script src="/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script>
+      var nav=document.querySelector('nav');
+      window.addEventListener('scroll',function(){
+        if(window.pageYOffset > 150){
+          nav.classList.add('bg-dark','shadow');
+        }else{
+          nav.classList.remove('bg-dark');
+        }
+      })
+    </script>
+</body>
+</html>

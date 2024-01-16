@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>admissions</title>
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet' >
+    <link rel="stylesheet" href="/css/bootstrap.min.css"> 
+    <link rel="stylesheet" href="swiper.min.css">
+    <style>
+         @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700&display=swap');
+      *{
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+}
+body{
+  background-color: #fff;
+  background-size: cover;
+  object-fit: cover;
+}
+.navbar-scrolled{
+  background-color: #16163F;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+}
+.bg-dark{
+background-color: #16163F !important;
+}
+      .navbar .navbar-nav .nav-link{
+        color: #fff;
+    text-decoration: none;
+    font-size: 13px;
+    flex: 1;
+    text-align: right;
+   
+      }
+      .navbar .navbar-expand-lg{
+        box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+      }
+      .navbar .navbar-nav .nav-link::after{
+        content: '';
+    width: 0%;
+    height: 2px;
+    background: #fff;
+    display: block;
+    margin: auto;
+    transition: 0.5s;
+      }
+   .navbar .navbar-nav .nav-link:hover::after{
+    width: 100%;
+   }
+.list-group-item{
+  list-style: none;
+  text-decoration: none;
+  font-weight: 600;
+}
+.addmissions-pg >img{
+  clip-path: polygon(0 0, 100% 0%, 100% 9%, 40% 78%, 0 65%);
+  border-bottom: 50px black;
+
+}
+.addmissions-pg:hover{
+  content: '';
+    width: 0%;
+    height: 2px;
+    background: red;
+    display: block;
+    margin: auto;
+    transition: 0.5s;
+}
+.addmissions-pg::after{
+  width: 100%;
+}
+.addmissions-about{
+color: #000;
+margin-bottom: 100px;
+animation: 3s;
+animation-name: s;
+}
+@keyframes s{
+  from{
+    margin-top: 50%;
+  }
+  to{
+    margin-top: 0%;
+  }
+}
+.infor-admis{
+  color: #000;
+  margin-bottom: 100px;
+  /* background-color: blue; */
+  padding-top: 50px;
+  padding-left: 50px;
+  padding-right: 50px;
+  padding-bottom: 50px;
+  border-radius: 10px;
+  box-shadow: rgba(67, 71, 85, 0.27) 0px 0px 0.25em, rgba(90, 125, 188, 0.05) 0px 0.25em 1em;
+  border: none;
+ 
+}
+
+   .form-ad{
+    color: #000;
+   }
+   #Application{
+    box-shadow: rgba(67, 71, 85, 0.27) 0px 0px 0.25em, rgba(90, 125, 188, 0.05) 0px 0.25em 1em;
+    padding-top: 50px;
+  padding-left: 50px;
+  padding-right: 50px;
+  padding-bottom: 50px;
+   }
+   .bxs-circle{
+    font-size: 10px;
+   }
+   .contact-div{
+  margin-top: 100px;
+    width: 100%;
+    background-color: #f44336;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    color: #fff;
+   }
+.footer-end{
+    /* background-color: blue; */
+    height: 50px;
+    font-size: 13px;
+    padding-bottom: 80px;
+    color: #000;
+    text-align: center;
+    padding-top: 50px;
+    box-shadow: rgba(0, 0, 0, 0.2) 0px 60px 40px -7px;
+   }
+    </style>
+</head>
+<body>
+    <!-- Nav Bar -->
+<nav class="navbar navbar-expand-lg sticky-top navbar-dark bg-dark">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="index.html"><img src="images/BUDGE-142a3934.webp" alt="budge" height="50px"/>&nbsp;&nbsp;&nbsp;&nbsp;Jovoc</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="index.html">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="About.html">About</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="academics.html">Academics</a>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link" href="admissions.html" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              Admissions&nbsp;<i class='bx bx-chevron-down' style="font-size: 12px;"></i></a>
+              <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                <li><a class="dropdown-item" href="ordinarylevel.html">Ordinary-level</a></li>
+                <li><a class="dropdown-item" href="advancedlevel.html">Advanced-level</a></li>
+                <li><a class="dropdown-item" href="admissions.html">Application</a></li>
+                <li><a class="dropdown-item" href="bursaries.html">Bursaries</a></li>
+              </ul>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link " href="gallery.html" tabindex="-1" aria ="true">Gallery</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link " href="contact.html" tabindex="-1" aria ="true">Contact Us</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+  <!-- Welcome to addmissions -->
+  <div class="container addmissions-pg">
+    <img src="images/DSC_0692-ec8ddffa.webp" alt="class-block" height="250px" width="100%" style="object-fit: cover; ">
+  </div>
+  <!-- about Admissions -->
+  <div class="container-md addmissions-about">
+    <h1>Admissions</h1>
+    <p>To be admitted at St. Joseph's vocational school, a student must have successfully completed PLE <br>
+      (Primary Leaving Examination) to qualify for Lower/Ordinary Level entry or UCE (Uganda Certificate of Education) <br>
+      to qualify for Higher Level entry or UACE (Uganda Advanced Certificate of Education).</p>
+  </div>
+
+  <div class="container-md infor-admis">
+    <h1>Admission Criteria</h1>
+    <p><i class='bx bxs-circle'></i>&nbsp;&nbsp;Our school is a boys-only secondary school, so to join our community as a student, one must be a male. <br><br>
+
+      <i class='bx bxs-circle'></i>&nbsp;&nbsp;  We are a catholic church-founded school, therefore students who join us must be Catholics. <br><br>
+      
+      <i class='bx bxs-circle'></i>&nbsp;&nbsp;To be admitted at St. Joseph's in S1, one must have sat and passed interviews conducted at school towards the end of each academic year.&nbsp;By this time P7 candidates are usually done with P.L.E examinations. <br><br> 
+      
+      
+      <i class='bx bxs-circle'></i>&nbsp;&nbsp;  Application forms for interviews must be picked from respective parishes when we advertise using our website, parishes, and other public domains. <br><br>
+      Application forms can also be picked from school. <br><br>
+      
+      <i class='bx bxs-circle'></i>&nbsp;&nbsp; Students who have missed S1 entrance interviews especially those not captured within parishes from our catchment areas of Mbarara, Ntungamo, Bushenyi, Ibanda, and  Isingiro are also welcome to join our school but must have passed in grade one. <br><br>
+      
+      <i class='bx bxs-circle'></i>&nbsp;&nbsp; To be Admitted at St. Joseph's in S5, one must have sat for and passed U.C.E examinations. <br><br>
+      <i class='bx bxs-circle'></i>&nbsp;&nbsp;  To attain a combination of desired subjects, the candidate must have passed each subject with atleast credit 4 (C4). <br><br>
+      <i class='bx bxs-circle'></i>&nbsp;&nbsp;  It should be noted that failure to attain atleast a credit 4 (C4) in a single subject may affect the desired combination. <br><br> 
+      
+      <i class='bx bxs-circle'></i>&nbsp;&nbsp;  We also admit students in other classes where vacancies are available excluding candidate classes. <br><br>
+      
+      <i class='bx bxs-circle'></i>&nbsp;&nbsp;  Students joining us must be aware that we're a very competitive institution and highly keen on discipline and religion, a student who falls out of line may be asked to leave us. </p>
+  </div>
+
+  <!-- forms -->
+  <div class="container-md form-ad" id="Application">
+    <h2>Application Form</h2>
+    <div class="row">
+        <div class="col">
+          <input type="text" class="form-control" placeholder="First name" aria-label="First name">
+        </div>
+        <div class="col">
+          <input type="text" class="form-control" placeholder="Last name" aria-label="Last name">
+        </div>
+      </div> <br>
+    <form class="row g-3">
+        <div class="col-md-6">
+          <label for="inputEmail4" class="form-label">Email</label>
+          <input type="email" class="form-control" id="inputEmail4">
+        </div>
+        <div class="col-md-6">
+          <label for="inputPassword4" class="form-label">Password</label>
+          <input type="password" class="form-control" id="inputPassword4">
+        </div>
+        <div class="col-12">
+          <label for="inputAddress" class="form-label">Performance</label>
+          <input type="text" class="form-control" id="inputAddress" placeholder="P.L.E Results">
+        </div>
+        <div class="col-12">
+          <label for="inputAddress" class="form-label">Home-Parish</label>
+          <input type="text" class="form-control" id="inputAddress" placeholder="Parish">
+        </div>
+        <div class="col-12">
+          <label for="inputAddress2" class="form-label">Performance</label>
+          <input type="text" class="form-control" id="inputAddress2" placeholder="0-Level Results">
+        </div>
+        <div class="col-12">
+            <label for="inputAddress2" class="form-label">Combination</label>
+            <input type="text" class="form-control" id="inputAddress2" placeholder="Choose Combination">
+          </div>
+          <div class="col-12">
+            <label for="inputAddress" class="form-label">Home-Parish</label>
+            <input type="text" class="form-control" id="inputAddress" placeholder="Parish">
+          </div>
+          <div class="mb-3">
+            <label for="formFileMultiple" class="form-label">Upload I.D And result slip</label>
+            <input class="form-control" type="file" id="formFileMultiple" multiple>
+          </div>
+        <div class="col-md-6">
+          <label for="inputCity" class="form-label">City</label>
+          <input type="text" class="form-control" id="inputCity">
+        </div>
+        <div class="col-md-4">
+          <label for="inputState" class="form-label">District</label>
+          <select id="inputState" class="form-select">
+            <option selected>Choose...</option>
+            <option>Mbarara</option>
+            <option>Ibanda</option>
+            <option>Isingiro</option>
+            <option>Kabale</option>
+            <option>Bushenyi</option>
+            <option>Kampala</option>
+            <option>Masaka</option>
+            <option>Ntungamo</option>
+            <option>Ishaka</option>
+          </select>
+        </div>
+        <div class="col-md-2">
+          <label for="inputZip" class="form-label">Box No.</label>
+          <input type="text" class="form-control" id="inputZip">
+        </div>
+        <div class="col-12">
+          <div class="form-check">
+            <input class="form-check-input" type="checkbox" id="gridCheck">
+            <label class="form-check-label" for="gridCheck">
+              Accept Terms of Service
+            </label>
+          </div>
+        </div>
+        <div class="col-12">
+          <button type="submit" class="btn btn-primary">submit</button>
+        </div>
+      </form>
+  </div>
+  <div class="container-md">
+    <div class="container contact-div">
+      <div class="row">
+        <div class="col">
+          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3989.579324858763!2d30.642581073763097!3d-0.6271307352584048!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x19d91a4738fd4dbb%3A0x9420c21b90456cdf!2sSt.%20Joseph&#39;s%20Vocational%20School%20Mbarara!5e0!3m2!1sen!2sug!4v1699793525654!5m2!1sen!2sug" width="400" height="250" style="border:0; display: flex; justify-content: flex-end; border-radius: 5px;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+        <div class="col">
+          <h3 style="text-align: left; padding-left: 50px;">Location</h3>
+          <p style="text-align: left; padding-left: 50px;">Nyamitanga Hill, <br>
+            4KM From Mbarara Town, <br>
+            Branching off Mbarara - Kabale,<br>
+            Along Isingiro Rd. <br><br>
+            
+            P.O.Box 120, Mbarara - Uganda</p>
+        </div>
+        <div class="col">
+          <h3>Contacts</h3>
+          <p><i class='bx bx-envelope' style="text-align: left;"></i>&nbsp;Info@jovoc.sc.ug</p>
+          <p><i class='bx bx-envelope' style="text-align: left;"></i>&nbsp;headmaster@jovoc.sc.ug</p>
+          <p><i class='bx bxs-phone' style="color: white; text-align: left;"></i>&nbsp;+256 750 404590</p>
+          <p><i class='bx bxs-phone' style="color: white; text-align: left;"></i>&nbsp;+256 754 613843</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="container-md footer-end"><p>Copyright © 2023 St. Joseph's Vocational School Mbarara <br>
+    Powered by Jovoc I.T Department</p>
+  </div>
+
+
+
+
+
+
+    <script src="js/bootstrap.bundle.min.js"></script>
+  
+
+
+
+</body>
+</html>

@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>O'Level</title>
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet' >
+    <link rel="stylesheet" href="/css/bootstrap.min.css"> 
+    <link rel="stylesheet" href="swiper.min.css">
+    <style>
+            @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700&display=swap');
+      *{
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+}
+body{
+  background-color: #fff;
+  background-size: cover;
+  object-fit: cover;
+}
+.navbar-scrolled{
+  background-color: #16163F;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+}
+.bg-dark{
+background-color: #16163F !important;
+}
+      .navbar .navbar-nav .nav-link{
+        color: #fff;
+    text-decoration: none;
+    font-size: 13px;
+    flex: 1;
+    text-align: right;
+   
+      }
+      .navbar .navbar-expand-lg{
+        box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+      }
+      .navbar .navbar-nav .nav-link::after{
+        content: '';
+    width: 0%;
+    height: 2px;
+    background: #fff;
+    display: block;
+    margin: auto;
+    transition: 0.5s;
+      }
+   .navbar .navbar-nav .nav-link:hover::after{
+    width: 100%;
+   }
+   .addmissions-pg >img{
+  clip-path: polygon(0 0, 100% 0%, 100% 9%, 40% 78%, 0 65%);
+
+}
+   .olevel-info{
+    color: #000;
+    margin-top: 50px;
+    margin-bottom: 100px;
+   }
+   .table{
+    color: #000;
+   }
+   .best-uce{
+    padding-top: 30px;
+    padding-bottom: 50px;
+    padding-left: 10px;
+    padding-right: 10px;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+   }
+   .contact-div{
+  margin-top: 100px;
+    width: 100%;
+    background-color: #f44336;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    color: #fff;
+   }
+.footer-end{
+    /* background-color: blue; */
+    height: 50px;
+    font-size: 13px;
+    padding-bottom: 80px;
+    color: #000;
+    text-align: center;
+    padding-top: 50px;
+   }
+    </style>
+</head>
+<body>
+        <!-- Nav Bar -->
+<nav class="navbar navbar-expand-lg sticky-top navbar-dark bg-dark">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="index.html"><img src="images/BUDGE-142a3934.webp" alt="budge" height="50px"/>&nbsp;&nbsp;&nbsp;&nbsp;Jovoc</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="index.html">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="About.html">About</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="academics.html">Academics</a>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link" href="admissions.html" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              Admissions&nbsp;<i class='bx bx-chevron-down' style="font-size: 12px;"></i></a>
+              <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                <li><a class="dropdown-item" href="ordinarylevel.html">Ordinary-level</a></li>
+                <li><a class="dropdown-item" href="advancedlevel.html">Advanced-level</a></li>
+                <li><a class="dropdown-item" href="admissions.html">Application</a></li>
+                <li><a class="dropdown-item" href="bursaries.html">Bursaries</a></li>
+              </ul>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link " href="gallery.html" tabindex="-1" aria ="true">Gallery</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link " href="contact.html" tabindex="-1" aria ="true">Contact Us</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+ <!-- Welcome to Olevel -->
+ <div class="container addmissions-pg">
+  <img src="images/IMG_20190208_092117_6-fa93eca4.webp" alt="class-block" height="200px" width="100%" style="object-fit: cover; ">
+</div>
+<!-- O'level info -->
+  <div class="container-md olevel-info">
+    <h1>O'Level Academics</h1>
+    <p>The Ordinary Level Curriculum requires four years of Study From Senior One to Senior Four. All students Must Choose any of the available vocational subjects during the admission period to Completion.</p>
+  </div>
+  <div class="container-md olevel-info">
+    <table class="table table-striped">
+        <table class="table">
+            <thead>
+              <tr>
+                <th scope="col">Category</th>
+                <th scope="col">Subjects</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <th scope="row">Mathmatics & <br>Sciences</th>
+                <td>Biology, Chemistry, Physics, Physical Education,  and Mathematics</td>
+              </tr>
+              <tr>
+                <th scope="row">Social Sciences</th>
+                <td>Geography, History, Religious Education</td>
+              </tr>
+              <tr>
+                <th scope="row">Languages</th>
+                <td colspan="2">English Language, Kiswahili, Literature in English, Lunyankole</td>
+              </tr>
+              <tr>
+                <th scope="row">Vocational Subjects</th>
+                <td colspan="2">Building Construction, Fine Art, Agriculture, Technical drawing, Woodwork, Entrepreneurship </td>
+              </tr>
+            </tbody>
+          </table>
+      </table>
+  </div>
+  <div class="container-md best-uce">
+    <h5>Best U.C.E Students 2022</h5>
+    <img src="images/uce best students.png" alt="" width="100%" style="object-fit: cover; padding-top: 10px;"></div>
+  <div class="container-md">
+    <div class="container contact-div">
+      <div class="row">
+        <div class="col">
+          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3989.579324858763!2d30.642581073763097!3d-0.6271307352584048!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x19d91a4738fd4dbb%3A0x9420c21b90456cdf!2sSt.%20Joseph&#39;s%20Vocational%20School%20Mbarara!5e0!3m2!1sen!2sug!4v1699793525654!5m2!1sen!2sug" width="400" height="250" style="border:0; display: flex; justify-content: flex-end; border-radius: 5px;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+        <div class="col">
+          <h3 style="text-align: left; padding-left: 50px;">Location</h3>
+          <p style="text-align: left; padding-left: 50px;">Nyamitanga Hill, <br>
+            4KM From Mbarara Town, <br>
+            Branching off Mbarara - Kabale,<br>
+            Along Isingiro Rd. <br><br>
+            
+            P.O.Box 120, Mbarara - Uganda</p>
+        </div>
+        <div class="col">
+          <h3>Contacts</h3>
+          <p><i class='bx bx-envelope' style="text-align: left;"></i>&nbsp;Info@jovoc.sc.ug</p>
+          <p><i class='bx bx-envelope' style="text-align: left;"></i>&nbsp;headmaster@jovoc.sc.ug</p>
+          <p><i class='bx bxs-phone' style="color: white; text-align: left;"></i>&nbsp;+256 750 404590</p>
+          <p><i class='bx bxs-phone' style="color: white; text-align: left;"></i>&nbsp;+256 754 613843</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="container-md footer-end"><p>Copyright © 2023 St. Joseph's Vocational School Mbarara <br>
+    Powered by Jovoc I.T Department</p>
+  </div>
+
+
+
+
+
+
+    <script src="js/bootstrap.bundle.min.js"></script>
+  
+
+  
+
+
+
+
+
+
+
+</body>
+</html>
