@@ -15,9 +15,13 @@
     font-family: 'Poppins', sans-serif;
 }
 body{
+  background-image: url();
   background-color: #fff;
   background-size: cover;
   object-fit: cover;
+}
+.navbar{
+  background-color: #16163F;
 }
 .navbar-scrolled{
   background-color: #16163F;
@@ -73,25 +77,16 @@ background-color: #16163F !important;
     text-align: left;
     padding-left: 50px;
    }
-   .scrolling-text{
-    display: flex;
-    align-items: center;
-    background: #f00;
-    margin-top: 400px;
-   }
-   /* .scrolling-text >span{
-    position: relative;
-    display: inline-block;
-    flex-shrink: 0;
-    padding: 8px 20px;
-    margin-left: 50px;
-    background: #f00;
-    color: #fff;
-   } */
+   
    .msg-dr{
-    text-align: center;
+    text-align: left;
     border-radius: 5px;
     box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    padding-top: 20px;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-bottom: 20px;
+    background-color: #fff;
    }
   
    .contact-div{
@@ -111,23 +106,42 @@ background-color: #16163F !important;
     text-align: center;
     padding-top: 50px;
    }
+   #back-to-top-btn {
+        position: fixed;
+        bottom: 20px;
+        align-items: center;
+        right: 120px;
+        background-color: #000;clip-path: polygon(50% 0%, 100% 25%, 100% 100%, 0 100%, 0 25%);
+        box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+        color: #fff;
+        border: none;
+        border-radius: 5px;
+        padding: 10px 15px;
+        font-size: 16px;
+        cursor: pointer;
+        display: none; /* Hide initially, display when scrolling down */
+        transition: background-color 0.3s;
+      }
+      #back-to-top-btn:hover {
+        background-color: #333; /* Darker color on hover */
+      }
     </style>
 </head>
 <body>
         <!-- Nav Bar -->
 <nav class="navbar navbar-expand-lg fixed-top navbar-dark bg-dark">
     <div class="container-fluid">
-      <a class="navbar-brand" href="index.html"><img src="images/BUDGE-142a3934.webp" alt="budge" height="50px"/>&nbsp;&nbsp;&nbsp;&nbsp;Jovoc</a>
+      <a class="navbar-brand" href="Home.html"><img src="images/BUDGE-142a3934.webp" alt="budge" height="50px"/>&nbsp;&nbsp;&nbsp;&nbsp;Jovoc</a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
       <div class="collapse navbar-collapse" id="navbarNav">
         <ul class="navbar-nav ms-auto">
           <li class="nav-item">
-            <a class="nav-link active" aria-current="page" href="index.html">Home</a>
+            <a class="nav-link active" aria-current="page" href="Home.html">Home</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="About.html">About</a>
+            <a class="nav-link" href="Home.html">About</a>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="academics.html">Academics</a>
@@ -163,7 +177,7 @@ background-color: #16163F !important;
       <img src="images/denis-2fe7016b.webp" alt="dean of studies" style="border-radius: 5px;">
   <h6>Mr.Tukashaba Denis <br>Director of Studies</h6>
   <div class="scroling-text">
-    <span>Motto</span> <marquee behavior="scroll" direction="left">Ora Et Labora</marquee>
+    <!-- <span>Motto</span> <marquee behavior="scroll" direction="left">Ora Et Labora</marquee> -->
   </div>
     </div>
     <div class="col msg-dr">
@@ -212,6 +226,7 @@ background-color: #16163F !important;
       </div>
     </div>
   </div>
+  <button onclick="scrollToTop()" id="back-to-top-btn" title="Go to top">Top</button>
   <div class="container-md footer-end"><p>Copyright © 2023 St. Joseph's Vocational School Mbarara <br>
     Powered by Jovoc I.T Department</p>
   </div>
@@ -222,6 +237,31 @@ background-color: #16163F !important;
 
 
     <script src="js/bootstrap.bundle.min.js"></script>
+    <script>
+      var nav=document.querySelector('nav');
+      window.addEventListener('scroll',function(){
+        if(window.pageYOffset > 150){
+          nav.classList.add('bg-dark','shadow');
+        }else{
+          nav.classList.remove('bg-dark');
+        }
+      })
+      // Function to scroll to the top of the page
+  function scrollToTop() {
+    document.body.scrollTop = 0; // For Safari
+    document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE, and Opera
+  }
+
+     // Show/hide the Back to Top button based on scroll position
+     window.addEventListener('scroll', function () {
+    var btn = document.getElementById('back-to-top-btn');
+    if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+      btn.style.display = 'block';
+    } else {
+      btn.style.display = 'none';
+    }
+  });
+    </script>
   
 
   

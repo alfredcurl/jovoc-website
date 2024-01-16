@@ -25,6 +25,19 @@ header{
   background-size: cover;
   background-repeat: no-repeat;
 }
+/* Apply styles to make sure h1 is visible */
+.container-md.welcome-word h1 {
+  opacity: 1;
+  transform: translateY(0);
+  transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+/* Optionally, you can add styles for when the h1 is hidden or transitioning */
+.container-md.welcome-word.hide h1 {
+  opacity: 0;
+  transform: translateY(-20px);
+}
+
 .navbar-scrolled{
   background-color: #16163F;
   box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
@@ -59,7 +72,7 @@ background-color: #16163F !important;
   margin: 0 auto;
   text-align: center;
   padding-bottom: 80px;
-  background-image: linear-gradient(rgba(4,9,30,0.5),rgb(4,9,30,0.5)),url(images/DSC_0692-ec8ddffa.webp);
+  background-image: linear-gradient(rgba(4,9,30,0.9),rgb(4,9,30,0.5)),url(images/A_SECTION_OF_SENIOR_SIX_SCIENCE_CLASS-3531d2f0.webp);
   text-shadow: #000;
   font-weight: 400;
 }
@@ -140,13 +153,68 @@ animation: thing 20s;
     font-size: 13px;
     padding-bottom: 80px;
    }
+   #back-to-top-btn {
+        position: fixed;
+        bottom: 20px;
+        align-items: center;
+        right: 120px;
+        background-color: #000;clip-path: polygon(50% 0%, 100% 25%, 100% 100%, 0 100%, 0 25%);
+        box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+        color: #fff;
+        border: none;
+        border-radius: 5px;
+        padding: 10px 15px;
+        font-size: 16px;
+        cursor: pointer;
+        display: none; /* Hide initially, display when scrolling down */
+        transition: background-color 0.3s;
+      }
+      #back-to-top-btn:hover {
+        background-color: #333; /* Darker color on hover */
+      }
+      /* Cookies consent */
+      #cookie-consent {
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            background-color: #000;
+            color: #fff;
+            padding: 10px;
+            text-align: center;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+            z-index: 1000;
+            display: none;
+        }
+
+        #cookie-consent button {
+            background-color: #f44336;
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            margin: 4px 2px;
+            cursor: pointer;
+            border-radius: 5px;
+        }
     </style>  
 </head>
 <body>
+  <!-- Request for cokie consent -->
+  <div id="cookie-consent">
+    <p>Privacy Policy: <br>  
+      Our website uses cookies to enhance your experience. By using our website, you consent to the use of cookies in accordance with this policy.
+      By using our website, you agree to the terms of this privacy policy and the use of cookies as described herein.
+      </p>
+    <button onclick="acceptCookies()">Got it!</button>
+</div>
   <!-- <img src="images/DSC_4181-392c7abd.webp" alt="" width="100%" height="480px" style="object-fit: cover;"> -->
   <header>
-    <div class="container-md welcome-word"> 
-      <h1>St.Joseph's Vocational School <br>
+    <div class="container-md welcome-word "> 
+      <h1>St.Joseph's&nbsp; Vocational&nbsp; School <br>
       Mbarara</h1>
       <p class="opening-p">
        <span>s</span> aint. Joseph’s Vocational School, Mbarara is a Private Boarding "O" and "A" level <br>
@@ -160,14 +228,14 @@ animation: thing 20s;
 <!-- Nav Bar -->
 <nav class="navbar navbar-expand-lg  navbar-dark bg-dark bg-transparent fixed-top">
   <div class="container-fluid">
-    <a class="navbar-brand" href="index.html"><img src="images/BUDGE-142a3934.webp" alt="budge" height="50px"/>&nbsp;&nbsp;&nbsp;&nbsp;Jovoc</a>
+    <a class="navbar-brand" href="Home.html"><img src="images/BUDGE-142a3934.webp" alt="budge" height="50px"/>&nbsp;&nbsp;&nbsp;&nbsp;Jovoc</a>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
     <div class="collapse navbar-collapse" id="navbarNav">
       <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
         <li class="nav-item">
-          <a class="nav-link active" aria-current="page" href="index.html">Home</a>
+          <a class="nav-link active" aria-current="page" href="Home.html">Home</a>
         </li>
         <li class="nav-item">
           <a class="nav-link" href="About.html">About</a>
@@ -243,31 +311,32 @@ animation: thing 20s;
 </div>
 <div class="container-md">
   <div class="container" style="background-color: #16163F; padding-bottom: 50px;">
-    <h4 style="text-align: center; color: #fff; padding-top: 50px;">Why Choose Jovoc</h4>
+    <h2 style="text-align: center; color: #fff; padding-top: 50px;">Why Choose Jovoc!</h2>
     <div class="row" style="color: #fff; padding-top: 20px;">
-      <div class="col">
+      <div class="col count-animate" data-target-number="43">
         <i class='bx bxs-calendar-check' style="font-size: 30px;"></i><br><br>
-        <h1 style="text-align: center;">43</h1>
+        <h1 style="text-align: center;">0</h1>
         <p>Years Of Experience</p>
       </div>
-      <div class="col">
+      <div class="col count-animate" data-target-number="3">
         <i class='bx bxs-graduation' style="font-size: 30px;"></i><br><br>
-        <h1>3</h1>
+        <h1>0</h1>
         <p>Vocational Courses</p>
       </div>
-      <div class="col">
+      <div class="col count-animate" data-target-number="956">
         <i class='bx bxs-user' style="font-size: 30px;"></i><br><br>
-       <h1 style="text-align: center;">956</h1>
-       <p>Total Students <br>Enrolled</p>
+        <h1 style="text-align: center;">0</h1>
+        <p>Total Students <br>Enrolled</p>
       </div>
-      <div class="col">
+      <div class="col count-animate" data-target-number="10">
         <i class='bx bx-football' style="font-size: 30px;"></i><br><br>
-        <h1>10</h1>
+        <h1>0</h1>
         <p>Extracurricular <br>Activities</p>
-       </div>
+      </div>
     </div>
   </div>
 </div>
+
 <div class="container-md">
   <div class="container contact-div">
     <div class="row">
@@ -293,6 +362,8 @@ animation: thing 20s;
     </div>
   </div>
 </div>
+<button onclick="scrollToTop()" id="back-to-top-btn" title="Go to top">Top</button>
+
 <div class="container-md footer-end"><p>Copyright © 2023 St. Joseph's Vocational School Mbarara <br>
   Powered by Jovoc I.T Department</p>
 </div>
@@ -314,6 +385,100 @@ animation: thing 20s;
           nav.classList.remove('bg-dark');
         }
       })
-    </script>
+      // Function to scroll to the top of the page
+  function scrollToTop() {
+    document.body.scrollTop = 0; // For Safari
+    document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE, and Opera
+  }
+
+     // Show/hide the Back to Top button based on scroll position
+     window.addEventListener('scroll', function () {
+    var btn = document.getElementById('back-to-top-btn');
+    if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+      btn.style.display = 'block';
+    } else {
+      btn.style.display = 'none';
+    }
+  });
+//opening h1 script
+document.addEventListener('DOMContentLoaded', function() {
+    // Get the h1 element
+    var headerText = document.querySelector('.welcome-word h1');
+
+    // Get the text content of the h1
+    var textToType = headerText.innerText;
+
+    // Clear the existing text content
+    headerText.innerText = '';
+
+    // Iterate through each character and append it to the h1 with a delay
+    for (var i = 0; i < textToType.length; i++) {
+      setTimeout(function(char) {
+        return function() {
+          // Append the current character
+          headerText.innerText += char;
+
+          // If it's the last character, remove the 'hide' class
+          if (headerText.innerText === textToType) {
+            document.querySelector('.welcome-word').classList.remove('hide');
+          }
+        };
+      }(textToType[i]), i * 100); // Adjust the delay (100ms in this example)
+    }
+  });
+ 
+//count animation
+function startCountAnimation() {
+    const elements = document.querySelectorAll('.count-animate');
+
+    const options = {
+      threshold: 0.5, // Adjust the threshold as needed
+    };
+
+    const observer = new IntersectionObserver((entries, observer) => {
+      entries.forEach((entry) => {
+        const targetNumber = parseInt(entry.target.getAttribute('data-target-number'));
+        const duration = 2000; // Set the duration for the count animation (in milliseconds)
+        const startTimestamp = performance.now();
+
+        function animateCount(currentTimestamp) {
+          const progress = (currentTimestamp - startTimestamp) / duration;
+
+          elements.forEach((element) => {
+            const startNumber = 1; // Start from 1 instead of 0
+            const endNumber = parseInt(element.getAttribute('data-target-number'));
+            const currentNumber = Math.floor(startNumber + progress * (endNumber - startNumber));
+
+            element.querySelector('h1').textContent = currentNumber;
+          });
+
+          if (progress < 1) {
+            requestAnimationFrame(animateCount);
+          }
+        }
+
+        requestAnimationFrame(animateCount);
+        observer.unobserve(entry.target);
+      });
+    }, options);
+
+    elements.forEach((element) => {
+      observer.observe(element);
+    });
+  }
+
+  document.addEventListener('DOMContentLoaded', startCountAnimation);
+
+  //cookie consent
+  document.addEventListener('DOMContentLoaded', function () {
+        const cookieConsent = document.getElementById('cookie-consent');
+        cookieConsent.style.display = 'block';
+    });
+
+    function acceptCookies() {
+        const cookieConsent = document.getElementById('cookie-consent');
+        cookieConsent.style.display = 'none';
+    }
+      </script>
 </body>
 </html>
